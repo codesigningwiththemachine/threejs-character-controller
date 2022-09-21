@@ -122,7 +122,7 @@ class CharacterController {
   }
 
   _LoadModels() {
-    gltfLoader.load("/models/krtin/krtinRPM.glb", (gltf) => {
+    gltfLoader.load("/models/move/kuma.glb", (gltf) => {
       // gltf.scene.scale.set(0.1, 0.1, 0.);
       this._model = gltf.scene;
       this._model.rotation.set(0, Math.PI, 0);
@@ -147,13 +147,13 @@ class CharacterController {
         };
       };
       const fbxloader = new FBXLoader(this._loadingManagert);
-      fbxloader.load("/models/krtin/walk.fbx", (a) => _OnLoad("walk", a));
-      fbxloader.load("/models/krtin/walkback.fbx", (a) =>
+      fbxloader.load("/models/move/Walking.fbx", (a) => _OnLoad("walk", a));
+      fbxloader.load("/models/move/Walking Backwards.fbx", (a) =>
         _OnLoad("walkback", a)
       );
-      fbxloader.load("/models/krtin/Running.fbx", (a) => _OnLoad("run", a));
-      fbxloader.load("/models/krtin/jump.fbx", (a) => _OnLoad("jump", a));
-      fbxloader.load("/models/krtin/Idle.fbx", (a) => _OnLoad("idle", a));
+      fbxloader.load("/models/move/Fast Run.fbx", (a) => _OnLoad("run", a));
+      fbxloader.load("/models/move/Jumping.fbx", (a) => _OnLoad("jump", a));
+      fbxloader.load("/models/move/Idle.fbx", (a) => _OnLoad("idle", a));
     });
   }
 
